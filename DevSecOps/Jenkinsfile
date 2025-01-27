@@ -9,7 +9,7 @@ pipeline {
         
         stage("Code"){
             steps{
-                git url: "https://github.com/LondheShubham153/node-todo-cicd.git" , branch: "master"
+                git url: "https://github.com/Archana-DevOps05/todo-app.git" , branch: "master"
                 echo "Code Cloned Successfully"
             }
         }
@@ -35,7 +35,7 @@ pipeline {
         }
         stage("Build & Test"){
             steps{
-                sh 'docker build -t node-app-batch-6:latest .'
+                sh 'docker build -t node-app .'
                 echo "Code Built Successfully"
             }
         }
